@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('./partials/header'); %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <%- include("partials/errors.ejs") %>
+                <form action="/clubhouse/sign-up" method="POST" class="authform">
+                    <h1>Sign Up</h1>
+                    <label for="firstname">Fisrt name</label>
+                    <input name="firstname" placeholder="First name" type="text" />
+                    <label for="lastname">Last name</label>
+                    <input name="lastname" placeholder="Last name" type="text" />
+                    <label for="username">Username</label>
+                    <input name="username" placeholder="Username" type="text" />
+                    <label for="email">Email</label>
+                    <input name="email" placeholder="Email" type="text" />
+                    <label for="password">Password</label>
+                    <input name="password" type="password" />
+                    <label for="confirmpassword">Confirm password</label>
+                    <input name="confirmpassword" type="password" />
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="checkbox" id="admin" name="admin">
+                        <label class="form-check-label" for="admin">
+                            Register as Admin
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Signup">
+
+                </form>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer'); %>
+    </footer>
+
+</body>
+
+</html>

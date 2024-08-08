@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head'); %>
+    <style>
+      .post-content {
+        text-align: justify;
+      }
+    </style>
+</head>
+
+<body class="container">
+
+  <header>
+    <%- include('./partials/header'); %>
+  </header>
+
+  <main>
+    <div class="post-container">
+      <% if (postsList.length> 0) { %>
+        <% postsList.forEach(function(post) { %>
+          <div class="card post-card">
+            <div class="card-body">
+              <h5 class="card-title post-title">
+                <%= post.title %>
+              </h5>
+              <p class="card-text post-content">
+                <%= post.content %>
+              </p>
+              <div class="post-footer-container">
+                <% if (locals.user !==undefined && locals.user.membership_status) { %>
+                  <small class="post-footer">by <%= post.full_name %> on <%= post.formatted_timestamp %></small>
+                  <% } else { %>
+                    <small class="post-footer">by an Anonymous member</small>
+                    <% } %>
+              </div>
+            </div>
+            <% if (locals.user !==undefined && locals.user.admin) { %>
+              <form action="/clubhouse/posts/<%= post.id %>/delete" method="POST" class="d-inline">
+                <button type="submit" class="btn-delete">Delete</button>
+              </form>
+              <% } %>
+          </div>
+          <% }); %>
+            <% } else { %>
+              <p class="text-center text-muted">There are no posts yet.</p>
+              <% } %>
+    </div>
+  </main>
+
+  <footer>
+    <%- include('./partials/footer'); %>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

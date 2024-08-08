@@ -1,0 +1,11 @@
+<h1>Something went wrong</h1>
+<p>
+    <%= message %>
+</p>
+<% if (error.status) { %>
+    <p>Status: <%= error.status %>
+    </p>
+    <% } %>
+        <% if (error.stack) { %>
+            <pre><%= error.stack %></pre>
+            <% } %>

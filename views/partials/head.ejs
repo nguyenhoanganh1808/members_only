@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/styles.css">
+<style>
+    body {
+        background-color: #f1f3f5;
+        font-family: Arial, sans-serif;
+    }
+
+    .post-container {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .post-card {
+        background-color: #fff;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .post-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .post-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .post-content {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .post-footer {
+        font-size: 0.875rem;
+        color: #999;
+    }
+
+    .btn-delete {
+        font-size: 0.75rem;
+        background-color: #ff5c5c;
+        border: none;
+        margin-top: 10px;
+    }
+
+    .btn-delete:hover {
+        background-color: #e60000;
+    }
+
+    .text-muted {
+        color: #6c757d !important;
+    }
+
+    .navbar {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .nav-link {
+        margin-right: 15px;
+        color: #555;
+    }
+
+    .nav-link:hover {
+        color: #007bff;
+    }
+
+    .navbar-nav.ml-auto .nav-link {
+        color: #007bff;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(0, 123, 255, 0.25);
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 123, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+
+    @media (max-width: 992px) {
+        .nav-link {
+            margin-right: 0;
+        }
+    }
+</style>
