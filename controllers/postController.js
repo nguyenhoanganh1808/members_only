@@ -4,8 +4,7 @@ const { body, validationResult } = require("express-validator");
 
 exports.posts_list_get = asyncHandler(async (req, res) => {
   const postsList = await db.getAllPosts();
-  console.log("postList " + postsList);
-  res.render("index", { postsList: postsList, currentUser: res.locals.user });
+  res.render("index", { postsList: postsList });
 });
 
 exports.new_post_get = asyncHandler(async (req, res) => {
